@@ -5,6 +5,8 @@ import { ruRU } from '@clerk/localizations'
 import { BrowserRouter } from 'react-router-dom'
 import Routing from './page/Routing'
 import { createGlobalStyle } from 'styled-components'
+import { QueryClient, QueryClientProvider } from 'react-query'
+import { ReactQueryDevtools } from 'react-query/devtools'
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 
@@ -52,15 +54,20 @@ font-family: 'Heebo', sans-serif;
 }
 `
 
+const queryClient = new QueryClient()
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
-      <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl='/' localization={ruRU}>
-        <>
-          <Global />
-          <Routing />
-        </>
-      </ClerkProvider>
+      <QueryClientProvider client={queryClient}>
+        <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl='/' localization={ruRU}>
+          <>
+            <Global />
+            <Routing />
+            <ReactQueryDevtools initialIsOpen={false} />
+          </>
+        </ClerkProvider>
+      </QueryClientProvider>
     </BrowserRouter>
   </StrictMode>,
 )

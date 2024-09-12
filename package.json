@@ -9,14 +9,18 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "server": "json-server -w server/db.json -p 3001"
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.7.0",
     "@clerk/localizations": "^2.8.1",
+    "@tanstack/react-query-devtools": "^5.56.2",
+    "axios": "^1.7.7",
     "json-server": "^1.0.0-beta.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-query": "^3.39.3",
     "react-router-dom": "^6.26.2",
     "styled-components": "^6.1.13",
     "zustand": "^4.5.5"
