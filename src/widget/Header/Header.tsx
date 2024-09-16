@@ -9,10 +9,10 @@ const Header = () => {
       <S.Nav>
         <S.LinkWrapper>
           <S.Links to='/'>
-            <S.Text $color={location.pathname === '/'}>Опросы</S.Text>
+            <S.Text $color={location.pathname === '/'}>Тесты</S.Text>
           </S.Links>
           <S.Links to='/'>
-            <S.Text>Пройденные опросы</S.Text>
+            <S.Text>Пройденные тесты</S.Text>
           </S.Links>
         </S.LinkWrapper>
       </S.Nav>

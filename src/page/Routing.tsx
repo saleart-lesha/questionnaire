@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import Header from '../widget/Header/Header'
-import QuestionnairePage from './QuestionnairePage/QuestionnairePage'
+import QuestionnairePage from './QuestionnairePage/QuestionnairePage/ui/QuestionnairePage'
 
 const Routing = () => {
   return (
