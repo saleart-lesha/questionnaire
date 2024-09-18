@@ -52,6 +52,11 @@ box-sizing: border-box;
 font-family: 'Heebo', sans-serif;
 
 }
+
+body{
+  background-color: #f1f3f5;
+}
+
 `
 
 const queryClient = new QueryClient()

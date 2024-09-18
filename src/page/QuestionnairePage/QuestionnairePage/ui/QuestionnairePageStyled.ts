@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
 export const Section = styled.div`
-  padding: 16px;
+  padding: 0 16px 32px 16px;
 `
+
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -23,21 +24,36 @@ export const Grid = styled.div`
     grid-template-columns: repeat(1, 1fr);
   }
 `
+
 export const PreviewQuestionnaire = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 8px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+
   &:hover {
     cursor: pointer;
-    background-color: gray;
-    border-radius: 5px;
+    background-color: #edf2ff;
+  }
+
+  &:hover img {
+    transform: translateY(-8px);
   }
 `
+
 export const Image = styled.img`
+  margin-top: 16px;
   height: 250px;
   width: 250px;
-  border-radius: 5px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+
   @media (max-width: 850px) {
     height: 200px;
     width: 200px;
@@ -47,6 +63,7 @@ export const Image = styled.img`
     width: 250px;
   }
 `
+
 export const Text = styled.p`
   padding-top: 8px;
   font-size: 20px;
@@ -56,6 +73,8 @@ export const Text = styled.p`
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   text-align: center;
+  margin-bottom: 8px;
+
   @media (max-width: 1370px) {
     font-size: 18px;
   }

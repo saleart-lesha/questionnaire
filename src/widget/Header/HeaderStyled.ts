@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const Header = styled.header`
-  padding: 32px 60px 32px 60px;
+  padding: 32px 0px;
   position: sticky;
   top: 0;
-  background-color: #ffffff;
+  background-color: #f1f3f5;
   z-index: 10;
 `
 
