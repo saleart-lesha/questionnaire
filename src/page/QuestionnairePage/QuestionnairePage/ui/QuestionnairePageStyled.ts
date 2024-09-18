@@ -74,7 +74,7 @@ export const Text = styled.p`
   -webkit-box-orient: vertical;
   text-align: center;
   margin-bottom: 8px;
-
+  color: #495057;
   @media (max-width: 1370px) {
     font-size: 18px;
   }
